@@ -69,7 +69,7 @@ int main() {
 
 ## Duas opções de funções
 
-- As funções estão no namespace fn.
+- As funções estão no namespace fw.
   - Para utilizar, basta incluir o arquivo flow.hpp e usar o namespace flow.
 - As funções estão disponibilizadas em dois formatos:
   - Formato de função normal, escrita em minúsculo, com parênteses e argumentos.
@@ -176,8 +176,8 @@ Outra função útil para manipulação de strings foi inspirada no operator + d
 
 ```cpp
 #include <iostream>
-#include "fn.hpp"
-using namespace fn;
+#include "flow.hpp"
+using namespace fw;
 int main() {
     auto a = "aa";              //const char *
     auto b = std::string("bb"); //std::string
@@ -1100,8 +1100,6 @@ auto zipwith(const CONTAINER_A& A, const CONTAINER_B& B, FNJOIN fnjoin)
 ```cpp
 #include "flow.hpp"
 using namespace fw;
-
-#define FNT2(x, y, fn) [](auto x, auto y) { return fn; }
 
 int main() {
     auto sum = [](auto x, auto y) { return x + y; };

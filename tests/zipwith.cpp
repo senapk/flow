@@ -1,8 +1,6 @@
 #include "flow.hpp"
 using namespace fw;
 
-#define FNT2(x, y, fn) [](auto x, auto y) { return fn; }
-
 int main() {
     auto sum = [](auto x, auto y) { return x + y; };
     auto concat = [](auto x, auto y) { return "{}{}" | Format(x, y); };
